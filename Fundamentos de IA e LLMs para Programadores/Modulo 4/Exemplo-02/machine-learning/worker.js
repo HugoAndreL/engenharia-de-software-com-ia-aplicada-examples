@@ -3,7 +3,7 @@ importScripts('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest');
 const MODEL_PATH = `yolov5n_web_model/model.json`;
 const LABELS_PATH = `yolov5n_web_model/labels.json`;
 const INPUT_FORMATER_DIMENTIONS = 640;
-const CLASS_TRESHOLD = 0.1;
+const CLASS_TRESHOLD = 0.4;
 
 let _labels = [];
 let _model = null;
@@ -84,7 +84,7 @@ function* processPredictions({ boxes, scores, classes }, width, height) {
         if (scores[index] < CLASS_TRESHOLD) continue;
 
         const label = _labels[classes[index]];
-        if (label !== "kite") continue;
+        if (label !== 'kite') continue;
 
         let [x1, y1, x2, y2] = boxes.slice(index * 4, (index + 1) * 4);
         x1 *= width;
