@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1A202C;
+    /* Fundo global escuro e moderno */
+    color: #E2E8F0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #3B82F6, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+header p {
+    color: #A0AEC0;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+    /* Isso vai empurrar o container para o centro vertical da tela */
+    gap: 0;
+}
+
+/* O status card gerado no script.js já tem seu próprio max-width e margens */
+
+/* Card de Sessão (Chat) - Estilizado para combinar com o do script.js */
+.chat-card {
+    background-color: #2D3748;
+    color: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.chat-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #4A5568;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt-question {
+    background-color: #1A202C;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    border-left: 4px solid #3B82F6;
+}
+
+.prompt-question strong {
+    color: #6366f1;
+}
+
+.ai-response {
+    line-height: 1.7;
+    color: #E2E8F0;
+    min-height: 100px;
+    background-color: #374151;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Ajuste no markdown gerado pela IA */
+.ai-response p {
+    margin-top: 0;
+}
+
+.ai-response code {
+    background-color: #1A202C;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #F59E0B;
+}
+
+.ai-response pre {
+    background-color: #1A202C;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.ai-response pre code {
+    color: #E2E8F0;
+    padding: 0;
+}
